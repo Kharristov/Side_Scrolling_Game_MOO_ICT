@@ -18,17 +18,50 @@ namespace Side_Scrolling_Game_MOO_ICT
         int jumpSpeed = 10;
         int force = 8; 
         int score = 0;
-        int playSpeed = 18; 
+        int playSpeed = 10; 
         int backLeft = 8; 
+            PictureBox PBtest1 = new PictureBox();
+            PictureBox PBtest2 = new PictureBox();
         public Form1()
         {
             InitializeComponent();
+
+            this.BackgroundImage = Properties.Resources.Pixel;
+            pictureBox13.BackColor = Color.Transparent;
+            pictureBox13.Image = Properties.Resources.cat;
+
+            this.KeyPreview = true;
+            this.KeyDown += TestKeyDown;
+
+            pictureBox1.BringToFront();
+        }
+
+        private void TestKeyDown(object sender, KeyEventArgs e) {
+            // Handle key presses to move the kitty
+            switch(e.KeyCode) {
+                case Keys.Left:
+                    // Move the kitty left
+                    pictureBox13.Left -= playSpeed;
+                    break;
+                case Keys.Right:
+                    // Move the kitty right
+                    pictureBox13.Left += playSpeed;
+                    break;
+                case Keys.Up:
+                    // Move the kitty up
+                    pictureBox13.Top -= playSpeed;
+                    break;
+                case Keys.Down:
+                    // Move the kitty down
+                    pictureBox13.Top += playSpeed;
+                    break;
+            }
         }
 
         private void mainGameTimer(object sender, EventArgs e)
         {
-            player.Top += jumpSpeed;
-            player.Refresh();
+            PBtest1.Top += jumpSpeed;
+            PBtest1.Refresh();
             if (jumping && force < 0)
             {
                 jumping = false;
@@ -42,17 +75,17 @@ namespace Side_Scrolling_Game_MOO_ICT
             {
                 jumpSpeed = 12;
             }
-            if (goLeft && player.Left > 100)
+            if (goLeft && PBtest1.Left > 100)
             {
-                player.Left -= playSpeed;
+                PBtest1.Left -= playSpeed;
             }
-            if (goRight && player.Left + (player.Width + 100) < this.ClientSize.Width)
+            if (goRight && PBtest1.Left + (PBtest1.Width + 100) < this.ClientSize.Width)
             {
-                player.Left += playSpeed;
+                PBtest1.Left += playSpeed;
             }
-            if (goRight && background.Left > -1353)
+            if (goRight && PBtest1.Left > -1353)
             {
-                background.Left -= backLeft;
+                PBtest1.Left -= backLeft;
                 foreach (Control x in this.Controls)
                 {
                     if (x is PictureBox && x.Tag == "platform" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
@@ -61,9 +94,9 @@ namespace Side_Scrolling_Game_MOO_ICT
                     }
                 }
             }
-            if (goLeft && background.Left < 2)
+            if (goLeft && PBtest1.Left < 2)
             {
-                background.Left += backLeft;
+                PBtest1.Left += backLeft;
                 foreach (Control x in this.Controls)
                 {
                     if (x is PictureBox && x.Tag == "platform" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
@@ -76,34 +109,34 @@ namespace Side_Scrolling_Game_MOO_ICT
             {
                 if (x is PictureBox && x.Tag == "platform")
                 {
-                    if (player.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                    if (PBtest1.Bounds.IntersectsWith(x.Bounds) && !jumping)
                     {
                         force = 8; 
-                        player.Top = x.Top - player.Height; 
+                        PBtest1.Top = x.Top - PBtest1.Height; 
                         jumpSpeed = 0; 
                     }
                 }
                 if (x is PictureBox && x.Tag == "coin")
                 {
-                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    if (PBtest1.Bounds.IntersectsWith(x.Bounds))
                     {
                         this.Controls.Remove(x); 
                         score++; 
                     }
                 }
             }
-            if (player.Bounds.IntersectsWith(door.Bounds) && hasKey)
+            if (PBtest1.Bounds.IntersectsWith(door.Bounds) && hasKey)
             {
 
                 gameTimer.Stop();
                 MessageBox.Show("You Completed the level!!");
             }
-            if (player.Bounds.IntersectsWith(key.Bounds))
+            if (PBtest1.Bounds.IntersectsWith(key.Bounds))
             {
                 this.Controls.Remove(key);
                 hasKey = true;
             }
-            if (player.Top + player.Height > this.ClientSize.Height + 60)
+            if (PBtest1.Top + PBtest1.Height > this.ClientSize.Height + 60)
             {
                 gameTimer.Stop(); 
                 MessageBox.Show("You Died!!!"); 

@@ -26,10 +26,8 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             components = new System.ComponentModel.Container();
-            background = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -38,7 +36,6 @@
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
             door = new PictureBox();
-            player = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -47,7 +44,7 @@
             txtScore = new Label();
             pictureBox11 = new PictureBox();
             pictureBox12 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)background).BeginInit();
+            pictureBox13 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -56,24 +53,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)door).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)key).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             SuspendLayout();
-            // 
-            // background
-            // 
-            background.Image = Properties.Resources.Pixel;
-            background.Location = new Point(0, 0);
-            background.Name = "background";
-            background.Size = new Size(735, 443);
-            background.SizeMode = PictureBoxSizeMode.AutoSize;
-            background.TabIndex = 0;
-            background.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -148,23 +135,13 @@
             // door
             // 
             door.BackgroundImage = Properties.Resources.dver_gr;
-            door.Location = new Point(0, 46);
+            door.Location = new Point(28, 36);
             door.Name = "door";
             door.Size = new Size(45, 79);
             door.SizeMode = PictureBoxSizeMode.AutoSize;
             door.TabIndex = 10;
             door.TabStop = false;
             door.Tag = "door";
-            // 
-            // player
-            // 
-            player.BackgroundImage = Properties.Resources.cat;
-            player.Location = new Point(35, 307);
-            player.Name = "player";
-            player.Size = new Size(51, 50);
-            player.SizeMode = PictureBoxSizeMode.AutoSize;
-            player.TabIndex = 11;
-            player.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -215,7 +192,6 @@
             // 
             gameTimer.Enabled = true;
             gameTimer.Interval = 20;
-            gameTimer.Tick += mainGameTimer;
             // 
             // txtScore
             // 
@@ -248,11 +224,20 @@
             pictureBox12.TabStop = false;
             pictureBox12.Tag = "coin";
             // 
+            // pictureBox13
+            // 
+            pictureBox13.Location = new Point(28, 304);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(50, 50);
+            pictureBox13.TabIndex = 19;
+            pictureBox13.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 404);
+            Controls.Add(pictureBox13);
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox11);
             Controls.Add(txtScore);
@@ -260,7 +245,6 @@
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox4);
-            Controls.Add(player);
             Controls.Add(door);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox7);
@@ -269,12 +253,10 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(background);
             Name = "Form1";
             Text = "Side Scrolling Platform Game";
             KeyDown += keyisdown;
             KeyUp += keyisup;
-            ((System.ComponentModel.ISupportInitialize)background).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -283,20 +265,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)door).EndInit();
-            ((System.ComponentModel.ISupportInitialize)player).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)key).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox background;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
@@ -305,7 +285,6 @@
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
         private PictureBox door;
-        private PictureBox player;
         private PictureBox pictureBox4;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
@@ -314,5 +293,6 @@
         private Label txtScore;
         private PictureBox pictureBox11;
         private PictureBox pictureBox12;
+        private PictureBox pictureBox13;
     }
 }
