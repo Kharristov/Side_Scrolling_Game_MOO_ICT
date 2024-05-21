@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace Side_Scrolling_Game_MOO_ICT
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         bool goLeft = false;
         bool goRight = false;
@@ -20,14 +21,13 @@ namespace Side_Scrolling_Game_MOO_ICT
         int score = 0;
         int playSpeed = 18;
         int backLeft = 8;
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
             this.BackgroundImage = Properties.Resources.Pixel;
             player.BackColor = Color.Transparent;
             player.Image = Properties.Resources.cat;
             player.BringToFront();
-
         }
 
         private void mainGameTimer(object sender, EventArgs e)
@@ -160,5 +160,7 @@ namespace Side_Scrolling_Game_MOO_ICT
             newWindow.Show();
             this.Hide();
         }
-    
+
+
+    }
 }
