@@ -11,24 +11,29 @@ namespace Side_Scrolling_Game_MOO_ICT
 {
     public partial class Form1 : Form
     {
-        bool goLeft = false; 
-        bool goRight = false; 
-        bool jumping = false; 
-        bool hasKey = false; 
+        bool goLeft = false;
+        bool goRight = false;
+        bool jumping = false;
+        bool hasKey = false;
         int jumpSpeed = 10;
-        int force = 8; 
+        int force = 8;
         int score = 0;
-        int playSpeed = 18; 
-        int backLeft = 8; 
+        int playSpeed = 18;
+        int backLeft = 8;
         public Form1()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.Pixel;
+            player.BackColor = Color.Transparent;
+            player.Image = Properties.Resources.cat;
+            player.BringToFront();
+
         }
 
         private void mainGameTimer(object sender, EventArgs e)
         {
             player.Top += jumpSpeed;
-            player.Refresh();
+            //player.Refresh();
             if (jumping && force < 0)
             {
                 jumping = false;
@@ -42,53 +47,53 @@ namespace Side_Scrolling_Game_MOO_ICT
             {
                 jumpSpeed = 12;
             }
-            if (goLeft && player.Left > 100)
+            if (goLeft && player.Left > 0)
             {
                 player.Left -= playSpeed;
             }
-            if (goRight && player.Left + (player.Width + 100) < this.ClientSize.Width)
+            if (goRight && player.Left + (player.Width + 100) < this.ClientSize.Width + 100)
             {
                 player.Left += playSpeed;
             }
-            if (goRight && background.Left > -1353)
-            {
-                background.Left -= backLeft;
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox && x.Tag == "platform" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
-                    {
-                        x.Left -= backLeft;
-                    }
-                }
-            }
-            if (goLeft && background.Left < 2)
-            {
-                background.Left += backLeft;
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox && x.Tag == "platform" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
-                    {
-                        x.Left += backLeft;
-                    }
-                }
-            }
+            //if (goRight && background.Left > -1353)
+            //{
+            //    background.Left -= backLeft;
+            //    foreach (Control x in this.Controls)
+            //    {
+            //        if (x is PictureBox && x.Tag == "platform" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
+            //        {
+            //            x.Left -= backLeft;
+            //        }
+            //    }
+            //}
+            //if (goLeft && background.Left < 2)
+            //{
+            //    background.Left += backLeft;
+            //    foreach (Control x in this.Controls)
+            //    {
+            //        if (x is PictureBox && x.Tag == "platform" || x is PictureBox && x.Tag == "coin" || x is PictureBox && x.Tag == "door" || x is PictureBox && x.Tag == "key")
+            //        {
+            //            x.Left += backLeft;
+            //        }
+            //    }
+            //}
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && x.Tag == "platform")
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds) && !jumping)
                     {
-                        force = 8; 
-                        player.Top = x.Top - player.Height; 
-                        jumpSpeed = 0; 
+                        force = 8;
+                        //player.Top = x.Top - player.Height;
+                        jumpSpeed = 0;
                     }
                 }
                 if (x is PictureBox && x.Tag == "coin")
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        this.Controls.Remove(x); 
-                        score++; 
+                        this.Controls.Remove(x);
+                        score++;
                     }
                 }
             }
@@ -96,7 +101,7 @@ namespace Side_Scrolling_Game_MOO_ICT
             {
 
                 gameTimer.Stop();
-                MessageBox.Show("You Completed the level!!");
+                MessageBox.Show("You Completed the level!!!");
             }
             if (player.Bounds.IntersectsWith(key.Bounds))
             {
@@ -105,8 +110,9 @@ namespace Side_Scrolling_Game_MOO_ICT
             }
             if (player.Top + player.Height > this.ClientSize.Height + 60)
             {
-                gameTimer.Stop(); 
-                MessageBox.Show("You Died!!!"); 
+                gameTimer.Stop();
+                MessageBox.Show("You Died!!!");
+                this.Close();
             }
         }
 
@@ -115,7 +121,7 @@ namespace Side_Scrolling_Game_MOO_ICT
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
-            }         
+            }
 
             if (e.KeyCode == Keys.Right)
             {
@@ -155,6 +161,6 @@ namespace Side_Scrolling_Game_MOO_ICT
             this.Hide();
         }
 
-     
+
     }
 }
