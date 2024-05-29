@@ -160,5 +160,7 @@ namespace Side_Scrolling_Game_MOO_ICT
             newWindow.Show();
             this.Hide();
         }
-    
+
+
+    }
 }
