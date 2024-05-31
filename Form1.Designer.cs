@@ -37,7 +37,6 @@
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
             door = new PictureBox();
-            player = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -46,7 +45,7 @@
             txtScore = new Label();
             pictureBox11 = new PictureBox();
             pictureBox12 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)background).BeginInit();
+            player = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -55,13 +54,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)door).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)player).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)key).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)player).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -145,16 +144,6 @@
             door.TabStop = false;
             door.Tag = "door";
             // 
-            // player
-            // 
-            player.BackgroundImage = Properties.Resources.cat;
-            player.Location = new Point(35, 307);
-            player.Name = "player";
-            player.Size = new Size(51, 50);
-            player.SizeMode = PictureBoxSizeMode.AutoSize;
-            player.TabIndex = 11;
-            player.TabStop = false;
-            // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.fih_art;
@@ -190,10 +179,10 @@
             // 
             // key
             // 
-            key.Image = Properties.Resources.fih_clu;
-            key.Location = new Point(661, 65);
+            key.Image = Properties.Resources.cl_ptk1;
+            key.Location = new Point(621, 65);
             key.Name = "key";
-            key.Size = new Size(50, 50);
+            key.Size = new Size(100, 50);
             key.SizeMode = PictureBoxSizeMode.AutoSize;
             key.TabIndex = 15;
             key.TabStop = false;
@@ -237,18 +226,28 @@
             pictureBox12.TabStop = false;
             pictureBox12.Tag = "coin";
             // 
+            // player
+            // 
+            player.ErrorImage = Properties.Resources.cat2;
+            player.Image = Properties.Resources.cat2;
+            player.Location = new Point(56, 297);
+            player.Name = "player";
+            player.Size = new Size(44, 60);
+            player.TabIndex = 19;
+            player.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 404);
+            Controls.Add(player);
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox11);
             Controls.Add(key);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox4);
-            Controls.Add(player);
             Controls.Add(door);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox7);
@@ -257,7 +256,6 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(background);
             Name = "Form1";
             Text = "Side Scrolling Platform Game";
             KeyDown += keyisdown;
@@ -270,13 +268,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)door).EndInit();
-            ((System.ComponentModel.ISupportInitialize)player).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)key).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)player).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,7 +288,6 @@
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
         private PictureBox door;
-        private PictureBox player;
         private PictureBox pictureBox4;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
@@ -299,5 +296,6 @@
         private Label txtScore;
         private PictureBox pictureBox11;
         private PictureBox pictureBox12;
+        private PictureBox player;
     }
 }

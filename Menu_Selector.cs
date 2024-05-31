@@ -35,7 +35,14 @@ namespace Side_Scrolling_Game_MOO_ICT
         {
             Form2 lvl2 = new();
             this.Hide();
-            lvl2 .Show();
+            lvl2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 lvl3 = new();
+            this.Hide();
+            lvl3.Show();
         }
     }
 }

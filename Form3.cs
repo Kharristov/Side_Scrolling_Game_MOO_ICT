@@ -10,7 +10,8 @@ using System.Windows.Forms;
 
 namespace Side_Scrolling_Game_MOO_ICT
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
+
     {
         bool goLeft = false;
         bool goRight = false;
@@ -21,16 +22,14 @@ namespace Side_Scrolling_Game_MOO_ICT
         int score = 0;
         int playSpeed = 18;
         int backLeft = 8;
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
             this.BackgroundImage = Properties.Resources.Pixel;
             player.BackColor = Color.Transparent;
             player.Image = Properties.Resources.pler;
             player.BringToFront();
-
         }
-
         private void mainGameTimer(object sender, EventArgs e)
         {
             player.Top += jumpSpeed;

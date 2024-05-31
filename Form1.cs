@@ -25,7 +25,7 @@ namespace Side_Scrolling_Game_MOO_ICT
             InitializeComponent();
             this.BackgroundImage = Properties.Resources.Pixel;
             player.BackColor = Color.Transparent;
-            player.Image = Properties.Resources.cat;
+            player.Image = Properties.Resources.pler;
             player.BringToFront();
 
         }

@@ -73,18 +73,20 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.Red;
             button1.Location = new Point(119, 209);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
             button1.Text = "В меню";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // Help
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(334, 311);
             Controls.Add(button1);
             Controls.Add(label4);

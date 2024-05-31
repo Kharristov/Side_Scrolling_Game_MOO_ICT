@@ -37,56 +37,63 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(192, 255, 192);
             button1.Location = new Point(115, 87);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
             button1.Text = "Уровень1";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(128, 255, 128);
             button2.Location = new Point(115, 137);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 1;
             button2.Text = "Уровень 2 ";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.FromArgb(0, 192, 0);
             button3.Location = new Point(115, 189);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 2;
             button3.Text = "Уровень 3";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(130, 41);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(101, 29);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(102, 32);
             label1.TabIndex = 3;
-            label1.Text = "label1";
+            label1.Text = "Уровни";
             // 
             // button4
             // 
+            button4.BackColor = Color.Red;
             button4.Location = new Point(115, 262);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 4;
             button4.Text = "В меню";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // Menu_Selector
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(334, 311);
             Controls.Add(button4);
             Controls.Add(label1);

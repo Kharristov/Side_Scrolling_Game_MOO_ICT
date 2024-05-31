@@ -143,6 +143,56 @@ namespace Side_Scrolling_Game_MOO_ICT.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat2 {
+            get {
+                object obj = ResourceManager.GetObject("cat2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cl_abjk {
+            get {
+                object obj = ResourceManager.GetObject("cl abjk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cl_hjp {
+            get {
+                object obj = ResourceManager.GetObject("cl hjp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cl_ptk {
+            get {
+                object obj = ResourceManager.GetObject("cl ptk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cl_ptk1 {
+            get {
+                object obj = ResourceManager.GetObject("cl ptk1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap door_abjk {
             get {
                 object obj = ResourceManager.GetObject("door abjk", resourceCulture);
@@ -236,6 +286,16 @@ namespace Side_Scrolling_Game_MOO_ICT.Properties {
         internal static System.Drawing.Bitmap Pixel1 {
             get {
                 object obj = ResourceManager.GetObject("Pixel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pler {
+            get {
+                object obj = ResourceManager.GetObject("pler", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
