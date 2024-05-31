@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 namespace Side_Scrolling_Game_MOO_ICT
 {
     public partial class Form1 : Form
@@ -16,43 +17,36 @@ namespace Side_Scrolling_Game_MOO_ICT
         bool jumping = false;
         bool hasKey = false;
         int jumpSpeed = 10;
-        int force = 8;
+        int force = 3;
         int score = 0;
-        int playSpeed = 18;
-        int backLeft = 8;
+        int playSpeed = 10;
         public Form1()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.Pixel;
-            player.BackColor = Color.Transparent;
-            player.Image = Properties.Resources.pler;
-            player.BringToFront();
+            //this.BackgroundImage = Properties.Resources.Pixel;
+            //player.BackColor = Color.Transparent;
+            //player.Image = Properties.Resources.pler;
+            //player.BringToFront();
 
         }
 
-        private void mainGameTimer(object sender, EventArgs e)
-        {
+
+        private void mainGameTimer(object sender, EventArgs e) {
             player.Top += jumpSpeed;
             //player.Refresh();
-            if (jumping && force < 0)
-            {
+            if(jumping && force < 0) {
                 jumping = false;
             }
-            if (jumping)
-            {
+            if(jumping) {
                 jumpSpeed = -12;
                 force -= 1;
-            }
-            else
-            {
+            } else {
                 jumpSpeed = 12;
             }
-            if (goLeft && player.Left > 0)
-            {
+            if(goLeft && player.Left > 0) {
                 player.Left -= playSpeed;
             }
-            if (goRight && player.Left + (player.Width + 100) < this.ClientSize.Width + 100)
-            {
+            if(goRight && player.Left + (player.Width + 100) < this.ClientSize.Width + 100) {
                 player.Left += playSpeed;
             }
             //if (goRight && background.Left > -1353)
@@ -77,90 +71,74 @@ namespace Side_Scrolling_Game_MOO_ICT
             //        }
             //    }
             //}
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox && x.Tag == "platform")
-                {
-                    if (player.Bounds.IntersectsWith(x.Bounds) && !jumping)
-                    {
+            foreach(Control x in this.Controls) {
+                if(x is PictureBox && x.Tag == "platform") {
+                    if(player.Bounds.IntersectsWith(x.Bounds) && !jumping) {
                         force = 8;
                         //player.Top = x.Top - player.Height;
                         jumpSpeed = 0;
                     }
                 }
-                if (x is PictureBox && x.Tag == "coin")
-                {
-                    if (player.Bounds.IntersectsWith(x.Bounds))
-                    {
+                if(x is PictureBox && x.Tag == "coin") {
+                    if(player.Bounds.IntersectsWith(x.Bounds)) {
                         this.Controls.Remove(x);
                         score++;
                     }
                 }
             }
-            if (player.Bounds.IntersectsWith(door.Bounds) && hasKey)
-            {
+            if(player.Bounds.IntersectsWith(door.Bounds) && hasKey) {
 
                 gameTimer.Stop();
                 MessageBox.Show("You Completed the level!!!");
             }
-            if (player.Bounds.IntersectsWith(key.Bounds))
-            {
+            if(player.Bounds.IntersectsWith(key.Bounds)) {
                 this.Controls.Remove(key);
                 hasKey = true;
             }
-            if (player.Top + player.Height > this.ClientSize.Height + 60)
-            {
+            if(player.Top + player.Height > this.ClientSize.Height + 60) {
                 gameTimer.Stop();
                 MessageBox.Show("You Died!!!");
                 this.Close();
             }
         }
 
-        private void keyisdown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Left)
-            {
+        private void keyisdown(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Left) {
                 goLeft = true;
             }
 
-            if (e.KeyCode == Keys.Right)
-            {
+            if(e.KeyCode == Keys.Right) {
                 goRight = true;
             }
 
-            if (e.KeyCode == Keys.Space && !jumping)
-            {
+            if(e.KeyCode == Keys.Space && !jumping) {
                 jumping = true;
             }
         }
 
-        private void keyisup(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Left)
-            {
+        private void keyisup(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Left) {
                 goLeft = false;
             }
-            if (e.KeyCode == Keys.Right)
-            {
+            if(e.KeyCode == Keys.Right) {
                 goRight = false;
             }
-            if (jumping)
-            {
+            if(jumping) {
                 jumping = false;
             }
         }
-        private void CloseGame(object sender, FormClosedEventArgs e)
-        {
+        private void CloseGame(object sender, FormClosedEventArgs e) {
             Application.Exit();
         }
 
-        private void RestartGame()
-        {
+        private void RestartGame() {
             Form1 newWindow = new Form1();
             newWindow.Show();
             this.Hide();
         }
 
+        private void pictureBox6_Click(object sender, EventArgs e) {
 
+        }
     }
 }

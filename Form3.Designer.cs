@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             components = new System.ComponentModel.Container();
             background = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -70,6 +69,7 @@
             // 
             background.Image = Properties.Resources.Без_названия__15_1;
             background.Location = new Point(2, 0);
+            background.Margin = new Padding(3, 4, 3, 4);
             background.Name = "background";
             background.Size = new Size(736, 368);
             background.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -80,9 +80,10 @@
             // 
             pictureBox2.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox2.Image = Properties.Resources.bloc_abjk;
-            pictureBox2.Location = new Point(2, 64);
+            pictureBox2.Location = new Point(2, 85);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(101, 50);
+            pictureBox2.Size = new Size(115, 37);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             pictureBox2.Tag = "platform";
@@ -91,9 +92,10 @@
             // 
             pictureBox3.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox3.Image = Properties.Resources.bloc_abjk;
-            pictureBox3.Location = new Point(183, 106);
+            pictureBox3.Location = new Point(186, 100);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(53, 50);
+            pictureBox3.Size = new Size(61, 44);
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             pictureBox3.Tag = "platform";
@@ -102,9 +104,10 @@
             // 
             pictureBox4.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox4.Image = Properties.Resources.bloc_abjk;
-            pictureBox4.Location = new Point(562, 94);
+            pictureBox4.Location = new Point(642, 125);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(99, 50);
+            pictureBox4.Size = new Size(113, 27);
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
             pictureBox4.Tag = "platform";
@@ -113,9 +116,10 @@
             // 
             pictureBox5.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox5.Image = Properties.Resources.bloc_abjk;
-            pictureBox5.Location = new Point(291, 156);
+            pictureBox5.Location = new Point(323, 100);
+            pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(151, 50);
+            pictureBox5.Size = new Size(173, 44);
             pictureBox5.TabIndex = 5;
             pictureBox5.TabStop = false;
             pictureBox5.Tag = "platform";
@@ -124,9 +128,10 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox6.Image = Properties.Resources.bloc_abjk;
-            pictureBox6.Location = new Point(105, 258);
+            pictureBox6.Location = new Point(103, 287);
+            pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(100, 50);
+            pictureBox6.Size = new Size(114, 32);
             pictureBox6.TabIndex = 6;
             pictureBox6.TabStop = false;
             pictureBox6.Tag = "platform";
@@ -135,9 +140,10 @@
             // 
             pictureBox7.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox7.Image = Properties.Resources.bloc_abjk;
-            pictureBox7.Location = new Point(630, 301);
+            pictureBox7.Location = new Point(536, 252);
+            pictureBox7.Margin = new Padding(3, 4, 3, 4);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(99, 50);
+            pictureBox7.Size = new Size(113, 27);
             pictureBox7.TabIndex = 7;
             pictureBox7.TabStop = false;
             pictureBox7.Tag = "platform";
@@ -146,9 +152,10 @@
             // 
             pictureBox8.BackgroundImage = Properties.Resources.bloc_abjk;
             pictureBox8.Image = Properties.Resources.bloc_abjk;
-            pictureBox8.Location = new Point(305, 301);
+            pictureBox8.Location = new Point(323, 287);
+            pictureBox8.Margin = new Padding(3, 4, 3, 4);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(151, 50);
+            pictureBox8.Size = new Size(173, 32);
             pictureBox8.TabIndex = 8;
             pictureBox8.TabStop = false;
             pictureBox8.Tag = "platform";
@@ -156,7 +163,8 @@
             // door
             // 
             door.Image = Properties.Resources.door_abjk;
-            door.Location = new Point(340, 80);
+            door.Location = new Point(364, 29);
+            door.Margin = new Padding(3, 4, 3, 4);
             door.Name = "door";
             door.Size = new Size(50, 75);
             door.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -167,9 +175,10 @@
             // coin
             // 
             coin.Image = Properties.Resources.fih_art;
-            coin.Location = new Point(183, 75);
+            coin.Location = new Point(186, 55);
+            coin.Margin = new Padding(3, 4, 3, 4);
             coin.Name = "coin";
-            coin.Size = new Size(33, 28);
+            coin.Size = new Size(38, 37);
             coin.SizeMode = PictureBoxSizeMode.StretchImage;
             coin.TabIndex = 11;
             coin.TabStop = false;
@@ -178,7 +187,8 @@
             // key
             // 
             key.Image = Properties.Resources.cl_abjk;
-            key.Location = new Point(105, 202);
+            key.Location = new Point(117, 229);
+            key.Margin = new Padding(3, 4, 3, 4);
             key.Name = "key";
             key.Size = new Size(100, 50);
             key.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -189,7 +199,8 @@
             // player
             // 
             player.Image = Properties.Resources.pler;
-            player.Location = new Point(393, 94);
+            player.Location = new Point(420, 40);
+            player.Margin = new Padding(3, 4, 3, 4);
             player.Name = "player";
             player.Size = new Size(44, 60);
             player.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -200,9 +211,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.fih_art;
-            pictureBox1.Location = new Point(34, 30);
+            pictureBox1.Location = new Point(39, 40);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(33, 28);
+            pictureBox1.Size = new Size(38, 37);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
@@ -211,9 +223,10 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.fih_art;
-            pictureBox9.Location = new Point(325, 258);
+            pictureBox9.Location = new Point(578, 207);
+            pictureBox9.Margin = new Padding(3, 4, 3, 4);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(33, 28);
+            pictureBox9.Size = new Size(38, 37);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 19;
             pictureBox9.TabStop = false;
@@ -222,9 +235,10 @@
             // pictureBox10
             // 
             pictureBox10.Image = Properties.Resources.fih_art;
-            pictureBox10.Location = new Point(409, 258);
+            pictureBox10.Location = new Point(350, 256);
+            pictureBox10.Margin = new Padding(3, 4, 3, 4);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(33, 28);
+            pictureBox10.Size = new Size(38, 37);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 20;
             pictureBox10.TabStop = false;
@@ -233,9 +247,10 @@
             // pictureBox11
             // 
             pictureBox11.Image = Properties.Resources.fih_art;
-            pictureBox11.Location = new Point(676, 267);
+            pictureBox11.Location = new Point(434, 256);
+            pictureBox11.Margin = new Padding(3, 4, 3, 4);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(33, 28);
+            pictureBox11.Size = new Size(38, 37);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 21;
             pictureBox11.TabStop = false;
@@ -244,9 +259,10 @@
             // pictureBox12
             // 
             pictureBox12.Image = Properties.Resources.fih_art;
-            pictureBox12.Location = new Point(593, 64);
+            pictureBox12.Location = new Point(678, 85);
+            pictureBox12.Margin = new Padding(3, 4, 3, 4);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(33, 28);
+            pictureBox12.Size = new Size(38, 37);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 22;
             pictureBox12.TabStop = false;
@@ -260,9 +276,9 @@
             // 
             // Form3
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(732, 363);
+            ClientSize = new Size(733, 367);
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox11);
             Controls.Add(pictureBox10);
@@ -280,6 +296,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(background);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form3";
             Text = "Form3";
             KeyDown += keyisdown;

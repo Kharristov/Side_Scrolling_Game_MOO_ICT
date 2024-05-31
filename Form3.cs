@@ -25,10 +25,10 @@ namespace Side_Scrolling_Game_MOO_ICT
         public Form3()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.Pixel;
-            player.BackColor = Color.Transparent;
-            player.Image = Properties.Resources.pler;
-            player.BringToFront();
+            //this.BackgroundImage = Properties.Resources.Pixel;
+          //  player.BackColor = Color.Transparent;
+           // player.Image = Properties.Resources.pler;
+           // player.BringToFront();
         }
         private void mainGameTimer(object sender, EventArgs e)
         {
